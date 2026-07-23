@@ -1,0 +1,10 @@
+from google.colab import files
+uploaded = files.upload()
+
+import cv2
+from google.colab.patches import cv2_imshow # Import cv2_imshow for displaying images in Colab
+
+# Use the uploaded image. Check kernel state for uploaded filenames.
+# The `uploaded` variable shows 'Screenshot 2026-07-17 094656.png' was uploaded.
+image_filename = 'Screenshot 2026-07-17 094656.png'
+image = cv2.imread(image_filename)
