@@ -1,0 +1,9 @@
+from google.colab import files
+uploaded = files.upload()
+
+import cv2
+# Replace "your_video_file.mp4" with the name of your uploaded video file.
+# If you meant to process an image, use cv2.imread("your_image_file.png") instead.
+cap = cv2.VideoCapture("your_video_file.mp4")
+slow_factor = 0.5
+fast_factor = 2.0
