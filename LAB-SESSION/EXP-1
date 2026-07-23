@@ -1,0 +1,22 @@
+from google.colab import files
+uploaded = files.upload()
+
+import cv2
+from google.colab.patches import cv2_imshow # Import cv2_imshow for displaying images in Colab
+
+# Use the uploaded image 'q2.jpeg'
+# If the image is not found, img will be None.
+img = cv2.imread('q2.jpeg')
+
+if img is None:
+    print("Error: Image 'q2.jpeg' not loaded. Please ensure it's uploaded and the filename is correct.")
+else:
+    gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    # Use cv2_imshow for Colab compatibility
+    cv2_imshow(gray_img)
+
+    cv2.imwrite('gray_image.jpg', gray_img)
+
+    # cv2.waitKey(0) and cv2.destroyAllWindows() are not needed with cv2_imshow
+    print("Grayscale image saved as 'gray_image.jpg' and displayed above.")
