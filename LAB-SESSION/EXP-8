@@ -1,0 +1,11 @@
+    # cv2.imshow does not work in Colab. Using cv2_imshow for display.
+    print("Displaying original image:")
+    cv2_imshow(image)
+    print("Displaying bigger image:")
+    cv2_imshow(bigger_image)
+    print("Displaying smaller image:")
+    cv2_imshow(smaller_image)
+
+    cv2.imwrite("Bigger_image.jpg", bigger_image)
+    cv2.imwrite("smaller_image.jpg", smaller_image)
+    print("Resized images saved as 'Bigger_image.jpg' and 'smaller_image.jpg'")
